@@ -21,9 +21,11 @@ i3: update
 	sudo cp config/.Xmodmap /etc/X11/xinit/.Xmodmap
 	sudo cp config/xinitrc /etc/X11/xinit/xinitrc
 	sudo cp config/red_sun.jpg /usr/share/misc/red_sun.jpg
+	sudo mkdir /opt/bin
 	sudo cp scripts/i3-exit scripts/i3-kuake /opt/bin/
+	#TODO add /opt/bin to path in /etc/profile
 
 
-virtual: i3 vmware
+guest: i3 vmware
 
 host: i3
