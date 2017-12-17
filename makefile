@@ -15,9 +15,15 @@ vmware: update
 	sudo systemctl enable vmtoolsd
 
 i3: update
-	sudo pacman -S ${FLAGS} ${PKG_I3} ${PKG_URXVT}
+	sudo pacman -S ${FLAGS} ${PKG_I3} ${PKG_URXVT} ${PKG_XDRV} ${PKG_XORG_EXTRA}
 	cp config/i3/config ~/.config/local/i3/config
 	cp config/.Xdefaults ~/.Xdefaults
 	sudo cp config/.Xmodmap /etc/X11/xinit/.Xmodmap
 	sudo cp config/xinitrc /etc/X11/xinit/xinitrc
 	sudo cp config/red_sun.jpg /usr/share/misc/red_sun.jpg
+	sudo cp scripts/i3-exit scripts/i3-kuake /opt/bin/
+
+
+virtual: i3 vmware
+
+host: i3

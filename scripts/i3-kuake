@@ -1,0 +1,2 @@
+#!/bin/sh
+urxvt -pe default,keyboard-select,clipboard,url-select,kuake -name kuake -geometry 192x24
